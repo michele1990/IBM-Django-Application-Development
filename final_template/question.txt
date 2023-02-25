@@ -1,0 +1,213 @@
+Course --> Python for beginners
+
+
+What is Python?
+a. A programming language
+b. A type of snake
+c. A type of fruit
+d. A type of car
+e. A type of fish
+Answer: a
+
+Which of the following is a data type in Python?
+a. integer
+b. string
+c. float
+d. boolean
+e. all of the above
+Answer: e
+
+How do you write a comment in a Python script?
+a. // This is a comment
+b. # This is a comment
+c. / This is a comment
+d. /* This is a comment */
+Answer: b
+
+Which of the following is not a comparison operator in Python?
+a. ==
+b. <
+c. >
+d. >=
+e. =
+Answer: e
+
+What does the following code print?
+
+scss
+Copy code
+my_list = [1, 2, 3]
+print(my_list[1])
+a. 1
+b. 2
+c. 3
+d. [1, 2, 3]
+Answer: b
+
+What is the output of the following code?
+
+css
+Copy code
+a = 5
+b = 2
+c = a // b
+print(c)
+a. 2
+b. 2.5
+c. 3
+d. 3.0
+Answer: a, c
+
+Which of the following is not a valid variable name in Python?
+a. my_var
+b. 1_var
+c. myVar
+d. my_var_1
+Answer: b
+
+What does the range() function in Python do?
+a. generates a sequence of numbers
+b. converts a string to a list
+c. reverses a list
+d. sorts a list
+Answer: a
+
+What is the output of the following code?
+
+css
+Copy code
+a = [1, 2, 3]
+b = a
+b.append(4)
+print(a)
+a. [1, 2, 3]
+b. [1, 2, 3, 4]
+c. [2, 3, 4]
+d. [1, 2, 4]
+Answer: b
+
+What is the output of the following code?
+
+scss
+Copy code
+for i in range(5):
+    print(i)
+a. 0 1 2 3 4
+b. 1 2 3 4 5
+c. 5 4 3 2 1
+d. 4 3 2 1 0
+Answer: a
+
+
+
+
+course --> Python for professionals
+
+Which of the following is a valid way to define a Python class?
+a. class MyClass():
+b. class MyClass:
+c. class MyClass(object):
+d. class MyClass[]:
+e. def MyClass():
+Answer: b, c
+
+Which of the following data structures is immutable in Python?
+a. list
+b. tuple
+c. dictionary
+d. set
+e. array
+Answer: b
+
+What is the output of the following code?
+
+scss
+Copy code
+my_set = {1, 2, 3}
+my_set.add(4)
+print(my_set)
+a. {1, 2, 3}
+b. {1, 2, 3, 4}
+c. [1, 2, 3, 4]
+d. (1, 2, 3, 4)
+Answer: b
+
+Which of the following is a valid way to define a generator function in Python?
+a. def my_generator(): return [1, 2, 3]
+b. def my_generator(): yield 1; yield 2; yield 3
+c. def my_generator(): return (1, 2, 3)
+d. def my_generator(): for i in range(3): return i
+Answer: b
+
+What is the output of the following code?
+
+css
+Copy code
+a = [1, 2, 3]
+b = a.copy()
+b[0] = 4
+print(a)
+a. [1, 2, 3]
+b. [4, 2, 3]
+c. [1, 2, 3, 4]
+d. [4, 2, 3, 1]
+Answer: a
+
+Which of the following is a valid SQL query to select all rows from a table named my_table?
+a. SELECT * FROM my_table;
+b. SELECT FROM my_table;
+c. SELECT * WHERE my_table;
+d. SELECT FROM my_table WHERE *;
+Answer: a
+
+What is the output of the following code?
+
+python
+Copy code
+import re
+my_string = "The quick brown fox jumps over the lazy dog."
+result = re.findall(r"\b\w{4}\b", my_string)
+print(result)
+a. ["The", "quick", "brown", "jumps", "over", "lazy"]
+b. ["The", "quick", "brown", "fox", "jumps", "over", "lazy", "dog"]
+c. ["brown", "jumps", "over", "lazy"]
+d. ["quick", "brown", "jumps", "over"]
+Answer: c
+
+What is the output of the following code?
+
+python
+Copy code
+import os
+os.mkdir("mydir")
+os.chdir("mydir")
+with open("myfile.txt", "w") as f:
+    f.write("Hello, world!")
+with open("myfile.txt", "r") as f:
+    print(f.read())
+a. "Hello, world!"
+b. "myfile.txt"
+c. "mydir/myfile.txt"
+d. an error is raised
+Answer: a
+
+What is the output of the following code?
+
+css
+Copy code
+a = [1, 2, 3]
+b = a[:]
+b.append(4)
+print(a)
+a. [1, 2, 3]
+b. [1, 2, 3, 4]
+c. [2, 3, 4]
+d. [1, 2, 4]
+Answer: a
+
+Which of the following is not a valid way to iterate over a list in Python?
+a. for item in my_list:
+b. for i in range(len(my_list)):
+c. for item in range(my_list):
+d. for i, item in enumerate(my_list):
+Answer: c
