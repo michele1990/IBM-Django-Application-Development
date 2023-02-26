@@ -52,7 +52,6 @@ class Learner(models.Model):
                self.occupation
 
 
-# Course model
 class Course(models.Model):
     name = models.CharField(null=False, max_length=30, default='online course')
     image = models.ImageField(upload_to='course_images/')
@@ -62,10 +61,12 @@ class Course(models.Model):
     users = models.ManyToManyField(settings.AUTH_USER_MODEL, through='Enrollment')
     total_enrollment = models.IntegerField(default=0)
     is_enrolled = False
+    exam = models.BooleanField(default=False)
 
     def __str__(self):
         return "Name: " + self.name + "," + \
                "Description: " + self.description
+
 
 
 # Lesson model
@@ -93,6 +94,37 @@ class Enrollment(models.Model):
     date_enrolled = models.DateField(default=now)
     mode = models.CharField(max_length=5, choices=COURSE_MODES, default=AUDIT)
     rating = models.FloatField(default=5.0)
+
+#here start my project
+#question and Choiche classes
+
+
+class Question(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, default=1)
+    text = models.TextField(default='')
+    grade_point = models.FloatField()
+
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    text = models.TextField(default='')
+    is_correct = models.BooleanField(default=False)
+
+
+
+class Submission(models.Model):
+    enrollment = models.ForeignKey(Enrollment, on_delete=models.CASCADE)
+    choices = models.ManyToManyField(Choice)
+
+    def get_score(self):
+        correct_choices = self.choices.filter(is_correct=True)
+        total_choices = self.choices.count()
+        if total_choices == 0:
+            return 0.0
+        else:
+            return float(correct_choices.count()) / float(total_choices)
+
+
 
 
 # <HINT> Create a Question Model with:
